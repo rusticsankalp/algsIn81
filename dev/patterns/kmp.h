@@ -12,10 +12,10 @@ class KMP
 {
 private:
     string pattern;
-    vector<size_t> prefixTable;
+    size_t len;
+    size_t *pi;
 public:
     KMP(const string& pattern);
     bool search(const string& searchString);
 };
-
-#endif // KMP_H
+#endif
