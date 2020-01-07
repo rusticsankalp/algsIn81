@@ -1,10 +1,10 @@
-find_package (Boost COMPONENTS system filesystem unit_test_framework REQUIRED)
+find_package (Boost COMPONENTS system filesystem unit_test_framework  REQUIRED)
 include_directories (
     ${CMAKE_SOURCE_DIR}/dev/patterns
     ${lib.algsin81_SOURCE_DIR}
     ${Boost_INCLUDE_DIRS}
 )
-add_definitions (-DBOOST_TEST_DYN_LINK)
+
 add_executable (lib.test KMPtest.cpp)
 target_link_libraries (
     lib.test
@@ -13,5 +13,5 @@ target_link_libraries (
     ${Boost_SYSTEM_LIBRARY}
     ${Boost_UNIT_TEST_FRAMEWORK_LIBRARY}
 )
-#enable_testing()
+enable_testing()
 add_test (NAME kmp COMMAND lib.test)

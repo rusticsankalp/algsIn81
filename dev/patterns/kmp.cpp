@@ -42,8 +42,29 @@ KMP::KMP(const string& pat)
     }
 }
 
-bool KMP::search(const string& searchString)
+size_t KMP::singleSearch(const string& search)
 {
-    return false;
+
+    //size_t k = 0 ;
+    size_t s = 0, sd =0 , q=0,j;
+    for (j = 0; j<search.length()&& q<pattern.length();j++,q++)
+    {
+         cout <<"j :"<<j<<endl;
+        while( q!=0 && search[j] != pattern[q])
+        {
+            cout <<"Crawl back q"<<q;
+            q = pi[q-1];
+            cout <<"Crawl back q"<<q <<endl;
+        }
+
+        //if(search[j]==pattern[q])
+          //  q++;
+    }
+   cout <<"\n exit q "<<q;
+    if (q== pattern.length())
+    {
+        cout <<"\n pattern found at "<<j-pattern.length();
+    }
+    return q;
 }
 

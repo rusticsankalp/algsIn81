@@ -16,6 +16,6 @@ private:
     size_t *pi;
 public:
     KMP(const string& pattern);
-    bool search(const string& searchString);
+    size_t singleSearch(const string& search);
 };
 #endif
