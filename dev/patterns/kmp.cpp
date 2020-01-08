@@ -65,6 +65,6 @@ size_t KMP::singleSearch(const string& search)
     {
         cout <<"\n pattern found at "<<j-pattern.length();
     }
-    return q;
+    return j-pattern.length();
 }
 

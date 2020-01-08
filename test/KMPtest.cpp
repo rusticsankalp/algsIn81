@@ -10,18 +10,9 @@
 BOOST_AUTO_TEST_CASE(PassTest2)
 {
     KMP kmp("ababababca");
+    size_t k =kmp.singleSearch("aacababababca");
     BOOST_TEST_MESSAGE( "Testing initialization :" );
+    BOOST_CHECK_EQUAL(3, k);
     //BOOST_LOG_TRIVIAL(debug) << "A debug severity message";
-    //BOOST_CHECK_EQUAL(4, sqr(2));
-}
-/*
-BOOST_AUTO_TEST_CASE(PassTest)
-{
-    BOOST_CHECK_EQUAL(4, sqr(2));
-}
 
-BOOST_AUTO_TEST_CASE(PassTest3)
-{
-    BOOST_CHECK_EQUAL(9, sqr(3));
 }
-*/
