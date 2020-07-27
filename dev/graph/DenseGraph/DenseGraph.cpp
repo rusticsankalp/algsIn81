@@ -1,8 +1,6 @@
 
 #include "DenseGraph.h"
 
-Edge::Edge (int v =-1 , int w= -1) : v(v) , w(w){}
-
 DenseGraph::DenseGraph(int v, bool digraph = false) : 
     adj(v), nV(v) ,nE(0),bDigraph(digraph)
 {
@@ -12,17 +10,17 @@ DenseGraph::DenseGraph(int v, bool digraph = false) :
 
     }
 }
-/*
+
 void DenseGraph::Insert (Edge e)
 {
   int v = e.w, w = e.w;
   if(false == adj[e.v][e.w])
     {
       adj[e.v][e.w] = true;
-      if(!digraph) adj[e.w][e.v] = true;
+      if(!bDigraph) adj[e.w][e.v] = true;
     }
 }
-*/
+
 
 bool DenseGraph::Directed()
 {

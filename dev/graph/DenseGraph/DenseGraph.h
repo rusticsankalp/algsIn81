@@ -2,15 +2,11 @@
 #define DENSEGRAPH_H
 
 #include <vector>
-//#include "Edge.h"
+#include "Edge.h"
 /*
  * Matrix representation
  */
-struct Edge 
-{
-  int v,w;
-  Edge(int,int);
-};
+
 class DenseGraph
 {
   int nV, nE;

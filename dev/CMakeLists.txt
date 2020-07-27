@@ -8,7 +8,7 @@ add_library(
   graph/DenseGraph/DenseGraph.cpp
  # patterns/kmp.h
   patterns/kmp.cpp
-  sorts/keyindexcountsort.h
+ # sorts/keyindexcountsort.h
   sorts/keyindexcountsort.cpp
 )
 
