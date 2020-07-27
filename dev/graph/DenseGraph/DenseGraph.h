@@ -2,21 +2,32 @@
 #define DENSEGRAPH_H
 
 #include <vector>
-#include "Edge.h"
+//#include "Edge.h"
+/*
+ * Matrix representation
+ */
+struct Edge 
+{
+  int v,w;
+  Edge(int,int);
+};
 class DenseGraph
 {
   int nV, nE;
   bool bDigraph;
 
-  vector <vector<bool > > adj;
+  std::vector <std::vector<bool > > adj;
 
 public:
-  DenseGraph(int v, bool digraph = false) :
-      adj(V), nV= v, nE =0, bDigraph (digraph))
-	{
-	    for (int i =0 ; i <v , i++)
-		     adj[i].assign(v, false);
-	}
+  DenseGraph(int v, bool digraph);
+  int V();
+  int E();
+  bool Directed();
+  void Insert (Edge);
+  void Remove (Edge);
+  //bool Edge(int v, int w);
+
+
   
 };
 
