@@ -6,6 +6,7 @@ add_library(
  # graph/Edge/Edge.h
  # graph/DenseGraph/DenseGraph.h
   graph/DenseGraph/DenseGraph.cpp
+  graph/DenseGraph/DenseGraphIterator.cpp
  # patterns/kmp.h
   patterns/kmp.cpp
  # sorts/keyindexcountsort.h

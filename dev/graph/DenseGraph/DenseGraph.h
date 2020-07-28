@@ -23,8 +23,8 @@ public:
   void Remove (Edge);
   //bool Edge(int v, int w);
 
-
-  
+class DenseGraphIterator;
+friend class DenseGraphIterator;  
 };
 
 #endif
