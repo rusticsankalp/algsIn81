@@ -5,7 +5,7 @@
 #include <boost/log/trivial.hpp>
 #include <boost/test/unit_test.hpp>
 
-#include "kmp.h"
+#include "patterns/kmp.h"
 
 BOOST_AUTO_TEST_CASE(PassTest2)
 {
@@ -16,3 +16,4 @@ BOOST_AUTO_TEST_CASE(PassTest2)
     //BOOST_LOG_TRIVIAL(debug) << "A debug severity message";
 
 }
+
