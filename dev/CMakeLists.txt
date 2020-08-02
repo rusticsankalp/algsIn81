@@ -3,6 +3,7 @@ project(lib.algsin81)
 
 add_library(
   lib.algsin81 
+  graph/clients/EdgeIterationClient.cpp
   graph/DenseGraph/DenseGraph.cpp
   graph/DenseGraph/DenseGraphIterator.cpp
   patterns/kmp.cpp
@@ -13,7 +14,7 @@ add_library(
 target_include_directories(
   lib.algsin81
   PUBLIC
- # graph/Edge
+  graph/Edge
  # graph/DenseGraph
 )
 
