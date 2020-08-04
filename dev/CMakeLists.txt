@@ -14,7 +14,7 @@ add_library(
 target_include_directories(
   lib.algsin81
   PUBLIC
-  graph/Edge
+  graph/DenseGraph
  # graph/DenseGraph
 )
 
