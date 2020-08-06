@@ -4,6 +4,7 @@
 
 class DenseGraphIterator 
 {
+  friend class DenseGraph;
   const DenseGraph &G;
   int i, v;
   

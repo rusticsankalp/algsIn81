@@ -9,6 +9,7 @@
 
 class DenseGraph
 {
+
   int nV, nE;
   bool bDigraph;
 
@@ -16,15 +17,16 @@ class DenseGraph
 
 public:
   DenseGraph(int v, bool digraph);
-  int V();
-  int E();
-  bool Directed();
+  int V() const;
+  int E() const;
+  bool Directed() const;
   void Insert (Edge);
   void Remove (Edge);
+  bool IteratorTest(int,int) const;
   //bool Edge(int v, int w);
 
-class DenseGraphIterator;
-friend class DenseGraphIterator;  
+ // class DenseGraphIterator;
+  //friend class DenseGraphIterator;  
 };
 
 #endif

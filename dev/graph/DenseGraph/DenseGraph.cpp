@@ -1,4 +1,3 @@
-
 #include "DenseGraph.h"
 
 DenseGraph::DenseGraph(int v, bool digraph = false) : 
@@ -22,7 +21,7 @@ void DenseGraph::Insert (Edge e)
 }
 
 
-bool DenseGraph::Directed()
+bool DenseGraph::Directed() const
 {
   return bDigraph;
 }
@@ -36,7 +35,10 @@ void DenseGraph::Remove(Edge e)
     adj[e.w][e.v] = false;
     
 }
-
+bool DenseGraph:: IteratorTest(int i , int j) const
+{
+ return( adj[i][j] == true);
+}
 
 
 

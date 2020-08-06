@@ -6,15 +6,22 @@ DenseGraphIterator::DenseGraphIterator(const DenseGraph &G, int v) :
 
 int DenseGraphIterator::Begin()
 {
- return 0;
+ i = -1; 
+ return Next();
 }
 
 int DenseGraphIterator::Next()
 {
- return 0;
+  for (i++;i<G.V();i++)
+  {
+   // if(G.adj[v][i] == true) return i;
+    if(G.IteratorTest(v,i)) return i;
+  }
+  return -1;
+
 }
 
 bool DenseGraphIterator::End()
 {
- return false;
+ return i >= G.V();
 }
