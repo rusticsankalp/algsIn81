@@ -36,6 +36,11 @@ void DenseGraph::Remove(Edge e)
     
 }
 
+bool DenseGraph::IfEdgeExists(int v, int w) const
+{
+ return adj[v][w];
+}
+
 DenseGraph::Iterator::Iterator(const DenseGraph &G, int v) :
  G(G), v(v),i(-1)
 {}
@@ -60,6 +65,8 @@ bool DenseGraph::Iterator::End()
 {
   return i > G.V();
 }
+
+
 
 
 

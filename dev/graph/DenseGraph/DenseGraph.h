@@ -22,7 +22,7 @@ public:
   bool Directed() const;
   void Insert (Edge);
   void Remove (Edge);
-  //bool Edge(int v, int w);
+  bool IfEdgeExists(int  v, int w) const;
 
   class Iterator 
   {
