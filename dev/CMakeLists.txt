@@ -4,6 +4,7 @@ project(lib.algsin81)
 add_library(
   lib.algsin81 
   graph/clients/EdgeIterationClient.cpp
+  graph/clients/IOGraph.cpp
   graph/DenseGraph/DenseGraph.cpp
   graph/DenseGraph/DenseGraphIterator.cpp
   patterns/kmp.cpp
