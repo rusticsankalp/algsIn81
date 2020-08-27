@@ -17,3 +17,21 @@ void  IOGraph<Graph>::scan(ifstream& inp, Graph& G)
 
   G = G2;
 }
+
+template<class Graph>
+void IOGraph<Graph>::show(const Graph&G)
+{
+ for(int s =0 ;s <G.V();s++)
+ {
+   cout.width(2);
+   cout << s << ":";
+   typename Graph::Iterator A(G,s);
+
+   for(int t= A.Begin(); !A.End();t = A.Next())
+   {
+     cout << t << " ";
+   }
+  cout << endl;
+
+ }
+}

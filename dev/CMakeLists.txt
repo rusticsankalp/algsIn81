@@ -6,7 +6,7 @@ add_library(
   graph/clients/EdgeIterationClient.cpp
   graph/clients/IOGraph.cpp
   graph/DenseGraph/DenseGraph.cpp
-  graph/DenseGraph/DenseGraphIterator.cpp
+  #graph/DenseGraph/DenseGraphIterator.cpp
   patterns/kmp.cpp
   sorts/keyindexcountsort.cpp
 )

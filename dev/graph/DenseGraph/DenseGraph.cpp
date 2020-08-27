@@ -35,9 +35,30 @@ void DenseGraph::Remove(Edge e)
     adj[e.w][e.v] = false;
     
 }
-bool DenseGraph:: IteratorTest(int i , int j) const
+
+DenseGraph::Iterator::Iterator(const DenseGraph &G, int v) :
+ G(G), v(v),i(-1)
+{}
+
+int DenseGraph::Iterator::Begin()
 {
- return( adj[i][j] == true);
+  i = -1;
+  return Next();
+}
+
+int DenseGraph::Iterator::Next()
+{
+  for (i++;i <G.V();i++)
+  {
+    G.adj[v][i] == true;
+  } 
+
+  return -1;
+}
+
+bool DenseGraph::Iterator::End()
+{
+  return i > G.V();
 }
 
 

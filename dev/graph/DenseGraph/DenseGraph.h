@@ -22,11 +22,20 @@ public:
   bool Directed() const;
   void Insert (Edge);
   void Remove (Edge);
-  bool IteratorTest(int,int) const;
   //bool Edge(int v, int w);
 
- // class DenseGraphIterator;
-  //friend class DenseGraphIterator;  
+  class Iterator 
+  {
+    const DenseGraph&G; 
+    int i, v;
+  public: 
+    Iterator(const DenseGraph &G, int v);
+    int Begin();
+    int Next();  
+    bool End();
+  };
+
+  friend class Iterator;  
 };
 
 #endif
