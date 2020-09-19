@@ -3,6 +3,7 @@
 DenseGraph::DenseGraph(int v, bool digraph = false) : 
     adj(v), nV(v) ,nE(0),bDigraph(digraph)
 {
+    
     for(int i=0;i < nV;i++)
     {
         adj[i].assign(nV,false);
@@ -10,9 +11,18 @@ DenseGraph::DenseGraph(int v, bool digraph = false) :
     }
 }
 
+int DenseGraph::V() const
+{
+ return nV;
+}
+
+int DenseGraph::E() const
+{
+ return nE;
+}
+
 void DenseGraph::Insert (Edge e)
 {
-  int v = e.w, w = e.w;
   if(false == adj[e.v][e.w])  
     nE++;
   adj[e.v][e.w] = true;
@@ -65,9 +75,3 @@ bool DenseGraph::Iterator::End()
 {
   return i > G.V();
 }
-
-
-
-
-
-
