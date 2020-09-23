@@ -1,3 +1,5 @@
+#ifndef IOGRAPH_H
+#define IOGRAPH_H
 #include <iostream>
 #include <fstream>
 
@@ -5,7 +7,12 @@ template <class Graph>
 class IOGraph
 {
   public:
-  static void show (const Graph &);
-  static void scanEZ(Graph &);
-  static void scan(std::ifstream& inp, Graph& G);
+  void show (const Graph &);
+  void scanEZ(Graph &);
+  void scan(std::ifstream& inp, Graph& G);
 };
+
+
+#include "IOGraph.cpp"
+
+#endif

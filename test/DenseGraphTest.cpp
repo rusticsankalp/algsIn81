@@ -12,8 +12,9 @@ BOOST_AUTO_TEST_CASE(DenseGraphCreationTest)
  IOGraph<DenseGraph> iograph;
  std::ifstream ifs("twoNodeGraph.txt");
 
- //iograph.scan(ifs , dg);
-
+  iograph.scan(ifs , dg);
+  iograph.show(dg);
+/*
   int size,v,w;
   ifs >>size;
 
@@ -22,7 +23,7 @@ BOOST_AUTO_TEST_CASE(DenseGraphCreationTest)
     ifs >> v >> w;
     dg.Insert(Edge(v,w));
   }
- 
+ */
   cout << "\nsize of the graph " << dg.V() << "," <<dg.E();
   BOOST_CHECK_EQUAL(dg.V() , 2);
   BOOST_CHECK_EQUAL(dg.E() , 1);
