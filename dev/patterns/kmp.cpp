@@ -1,3 +1,4 @@
+#include <boost/log/trivial.hpp>
 #include "kmp.h"
 
 KMP::KMP(const string& pat)
@@ -20,9 +21,9 @@ KMP::KMP(const string& pat)
         cout <<"i :"<<i<<endl;
         while(k != 0  && (pattern[i] != pattern[k]))
         {
-            cout <<"Crawl back k"<<k;
+             BOOST_LOG_TRIVIAL(trace) <<"Crawl back k"<<k;
             k = pi[k-1];
-            cout <<"Crawl back k"<<k <<endl;
+            BOOST_LOG_TRIVIAL(trace)  <<"Crawl back k"<<k <<endl;
         }
 
         if(pattern[i] == pattern[k])
