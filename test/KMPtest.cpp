@@ -1,7 +1,6 @@
 #define BOOST_TEST_DYN_LINK
 #define BOOST_TEST_MAIN  // in only one cpp file
 
-#define BOOST_TEST_MODULE KMPTests
 #include <boost/log/trivial.hpp>
 #include <boost/test/unit_test.hpp>
 

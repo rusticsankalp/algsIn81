@@ -5,7 +5,7 @@ include_directories (
     ${Boost_INCLUDE_DIRS}
 )
 
-add_executable (lib.test KMPtest.cpp)
+add_executable (lib.test KMPtest.cpp DenseGraphTests.cpp)
 target_link_libraries (
     lib.test
     lib.algsin81
