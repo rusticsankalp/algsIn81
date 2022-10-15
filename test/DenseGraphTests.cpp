@@ -10,3 +10,19 @@ BOOST_AUTO_TEST_CASE(DenseGraphCreateTest)
     dense.Insert(Edge(0,1));
     BOOST_CHECK_EQUAL(1, dense.E());
 }
+
+BOOST_AUTO_TEST_CASE(DenseGraphCIteratorTest)
+{
+    DenseGraph dense(5,false);
+
+    dense.Insert(Edge(0,1));
+    BOOST_CHECK_EQUAL(1, dense.E());
+
+    dense.Insert(Edge(1,2));
+    dense.Insert(Edge(2,3));
+    dense.Insert(Edge(3,4));
+    dense.Insert(Edge(4,0));
+
+    BOOST_CHECK_EQUAL(5, dense.E());
+    
+}

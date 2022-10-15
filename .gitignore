@@ -80,3 +80,8 @@ temp/
 *.dll
 *.exe
 
+#bin folder
+bin/
+
+#Vscode
+.vscode/
