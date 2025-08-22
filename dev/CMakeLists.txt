@@ -1,5 +1,10 @@
 #project(lib.algsin81)
-find_package(Boost COMPONENTS log REQUIRED)
+
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+# Find Boost with the "log" component
+find_package(Boost REQUIRED COMPONENTS log)
 
 add_library(
   lib.algsin81 
@@ -10,7 +15,7 @@ add_library(
   patterns/kmp.cpp
   sorts/keyindexcountsort.h
   sorts/keyindexcountsort.cpp
-)
+ "CP/kattis_2048.cpp")
 target_link_libraries (
   lib.algsin81
   ${Boost_LOG_LIBRARY}
