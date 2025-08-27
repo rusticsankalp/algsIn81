@@ -85,3 +85,5 @@ bin/
 
 #Vscode
 .vscode/
+
+.vs/

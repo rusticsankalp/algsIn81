@@ -4,7 +4,7 @@
 #include <boost/log/trivial.hpp>
 #include <boost/test/unit_test.hpp>
 
-#include "kmp.h"
+#include <kmp.h>
 
 BOOST_AUTO_TEST_CASE(PassTest2)
 {
