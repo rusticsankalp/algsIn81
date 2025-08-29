@@ -13,7 +13,7 @@ file(GLOB_RECURSE PROJECT_SOURCES
 
 add_library(
   lib.algsin81 
-  ${PROJECT_SOURCES})
+  ${PROJECT_SOURCES} "CP/kattis_sidewayssorting.h" "sorts/selection_sort.h")
 target_link_libraries (
   lib.algsin81
   ${Boost_LOG_LIBRARY}

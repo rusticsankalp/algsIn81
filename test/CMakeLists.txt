@@ -31,7 +31,7 @@ file(GLOB_RECURSE PROJECT_SOURCES
     #${CMAKE_SOURCE_DIR}/dev/**/*.h
 )
 
-add_executable (lib.test ${PROJECT_SOURCES}  "test.cpp")
+add_executable (lib.test ${PROJECT_SOURCES})
 target_link_libraries (
     lib.test
     lib.algsin81
